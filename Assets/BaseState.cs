@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class BaseState : MonoBehaviour
 {
+    #region Methods
     // Called when state is entered
     public virtual void EnterState()
     {
@@ -21,5 +22,6 @@ public abstract class BaseState : MonoBehaviour
     {
 
     }
+    #endregion
 
 }

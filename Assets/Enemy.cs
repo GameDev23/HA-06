@@ -4,6 +4,12 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
+    #region Fields
+    public int Healthpoints;
+    #endregion
+
+
+    #region Methods
     // Called when attacking the player
     public virtual void Attack()
     {
@@ -40,4 +46,5 @@ public abstract class Enemy : MonoBehaviour
     {
 
     }
+    #endregion
 }
