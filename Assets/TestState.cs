@@ -11,7 +11,6 @@ public class TestState : BaseState
 
     public override void UpdateState()
     {
-        base.UpdateState();
     }
 
     public override void LeaveState()
