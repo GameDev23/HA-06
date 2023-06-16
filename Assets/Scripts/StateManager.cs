@@ -23,6 +23,9 @@ public class StateManager : MonoBehaviour
     // (1) Declare your scripts / states here like this  make them public to use them at other locations
     public BaseState Map;
     public BaseState Test;
+    public BaseState EnterFight;
+    public BaseState Fight;
+    public BaseState LeaveFight;
     /// end of (1)
     #endregion
 
@@ -46,6 +49,7 @@ public class StateManager : MonoBehaviour
         // assign / initialize the declared states
         Map = gameObject.AddComponent<MapState>();
         Test = gameObject.AddComponent<TestState>();
+        EnterFight = gameObject.AddComponent<EnterFight>();
     }
 
     // Start is called before the first frame update
@@ -62,13 +66,23 @@ public class StateManager : MonoBehaviour
         currentState.UpdateState();
     }
 
-    public void SwitchState(BaseState state)
+    public void SwitchState(BaseState state, Enemy enemy = null)
     {
+        Debug.Log(enemy.name);
+        if (enemy != null)
+        {
+            currentState.LeaveState();
+            currentState = state;
+            currentState.EnterStateWithEnemy(enemy);
+            return;
+        }
+        
         // Make transition between current and next state
         currentState.LeaveState();
         currentState = state;
         currentState.EnterState();
     }
+    
 
 }
 

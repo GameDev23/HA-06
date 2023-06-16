@@ -6,7 +6,13 @@ public abstract class BaseState : MonoBehaviour
 {
     #region Methods
     // Called when state is entered
+    
     public virtual void EnterState()
+    {
+
+    }
+    
+    public virtual void EnterStateWithEnemy(Enemy enemy = null)
     {
 
     }
