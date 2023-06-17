@@ -50,6 +50,8 @@ public class StateManager : MonoBehaviour
         Map = gameObject.AddComponent<MapState>();
         Test = gameObject.AddComponent<TestState>();
         EnterFight = gameObject.AddComponent<EnterFight>();
+        Fight = gameObject.AddComponent<Fight>();
+        LeaveFight = gameObject.AddComponent<LeaveFight>();
     }
 
     // Start is called before the first frame update
@@ -66,17 +68,8 @@ public class StateManager : MonoBehaviour
         currentState.UpdateState();
     }
 
-    public void SwitchState(BaseState state, GameObject enemy = null)
+    public void SwitchState(BaseState state)
     {
-        Debug.Log(enemy.name);
-        if (enemy != null)
-        {
-            currentState.LeaveState();
-            currentState = state;
-            currentState.EnterStateWithEnemy(enemy);
-            return;
-        }
-        
         // Make transition between current and next state
         currentState.LeaveState();
         currentState = state;

@@ -17,6 +17,6 @@ public class MapState : BaseState
 
     public override void LeaveState()
     {
-        Debug.Log("Leave State MapState");
+
     }
 }

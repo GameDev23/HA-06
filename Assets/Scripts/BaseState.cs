@@ -12,10 +12,6 @@ public abstract class BaseState : MonoBehaviour
 
     }
     
-    public virtual void EnterStateWithEnemy(GameObject enemy = null)
-    {
-
-    }
 
     // Called when in state, to check for actions within
     public virtual void UpdateState()

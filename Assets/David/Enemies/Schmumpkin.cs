@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,11 +8,17 @@ public class Schmumpkin : Enemy
     
     private Animator animator;
     
-    
+    private void Awake()
+    {
+        animator = gameObject.GetComponent<Animator>();
+        this.Healthpoints = 10;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        animator = gameObject.GetComponent<Animator>();
+        
+
     }
 
     // Update is called once per frame

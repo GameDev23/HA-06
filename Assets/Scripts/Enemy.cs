@@ -13,6 +13,7 @@ public abstract class Enemy : MonoBehaviour
 
 
     #region Methods
+    
     // Called when attacking the player
     public virtual void Attack()
     {

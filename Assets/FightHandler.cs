@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FightHandler : MonoBehaviour
 {
@@ -8,7 +10,17 @@ public class FightHandler : MonoBehaviour
 
     public GameObject enemy;
     public GameObject enemySpawnPos;
+    public SpriteRenderer BackgroundSpriteRenderer;
+    public Sprite backgroundImage;
     public GameObject CanvasFight;
+    
+    public Button AttackButton;
+    public Button DefendButton;
+    public Button HealButton;
+    public Button RunButton;
+
+    public TextMeshProUGUI HpTextMesh;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -28,10 +40,13 @@ public class FightHandler : MonoBehaviour
 
     public void EnterFight()
     {
+        //Activate FightUI
         CanvasFight.SetActive(true);
-        GameObject enemyInstance = Instantiate(enemy, enemySpawnPos.transform);
-        enemyInstance.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-        Debug.Log(enemyInstance.transform.localScale);
-        //enemyInstance.transform.position = enemySpawnPos.transform.position;
+        
+        //Spawn enemy
+        enemy = Instantiate(enemy, enemySpawnPos.transform);
+        //enemy.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+
+
     }
 }
