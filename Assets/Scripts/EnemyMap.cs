@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class EnemyMap : MonoBehaviour
 {
-    [SerializeField] private Enemy enemy;
+    [SerializeField] private GameObject enemy;
     // Start is called before the first frame update
     void Start()
     {

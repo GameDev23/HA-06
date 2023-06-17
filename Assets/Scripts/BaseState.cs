@@ -12,7 +12,7 @@ public abstract class BaseState : MonoBehaviour
 
     }
     
-    public virtual void EnterStateWithEnemy(Enemy enemy = null)
+    public virtual void EnterStateWithEnemy(GameObject enemy = null)
     {
 
     }

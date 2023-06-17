@@ -8,7 +8,7 @@ public class TopDownPlayerController : MonoBehaviour
     Rigidbody2D rb;
     Collider2D col;
     Animator anim;
-
+    
     Vector2 moveVector;
     bool isGod = false;
     bool isSprinting = false;

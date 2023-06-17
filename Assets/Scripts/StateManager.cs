@@ -66,7 +66,7 @@ public class StateManager : MonoBehaviour
         currentState.UpdateState();
     }
 
-    public void SwitchState(BaseState state, Enemy enemy = null)
+    public void SwitchState(BaseState state, GameObject enemy = null)
     {
         Debug.Log(enemy.name);
         if (enemy != null)

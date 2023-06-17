@@ -5,7 +5,8 @@ using UnityEngine;
 public class Manager : MonoBehaviour
 {
     // Instantiating Scene manager
-    public Manager Instance;
+    public static Manager Instance;
+    public bool isFight = false;
 
     private void Awake()
     {

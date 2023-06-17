@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class Schmumpkin : Enemy
 {
+    
+    private Animator animator;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public override void Attack()
     {
-        base.Attack();
+        animator.SetTrigger("triggerAttack");
     }
 
     public override void Defend()
@@ -44,5 +48,10 @@ public class Schmumpkin : Enemy
     public override void DieAnimation()
     {
         base.DieAnimation();
+    }
+
+    public override void IdleAnimation()
+    {
+        
     }
 }

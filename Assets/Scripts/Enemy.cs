@@ -5,6 +5,8 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
     #region Fields
+
+    public GameObject Body;
     public int Healthpoints;
     public bool isAnimation;
     #endregion
@@ -45,7 +47,11 @@ public abstract class Enemy : MonoBehaviour
 
     }
 
-
+    // IdleAnimation to call when enemy is not doing anything
+    public virtual void IdleAnimation()
+    {
+        
+    }
     // Method to call the animation showing the enemy leave the fight
     public virtual void ChargeAnimation()
     {
