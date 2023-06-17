@@ -46,12 +46,7 @@ public abstract class Enemy : MonoBehaviour
     {
 
     }
-
-    // IdleAnimation to call when enemy is not doing anything
-    public virtual void IdleAnimation()
-    {
-        
-    }
+    
     // Method to call the animation showing the enemy leave the fight
     public virtual void ChargeAnimation()
     {

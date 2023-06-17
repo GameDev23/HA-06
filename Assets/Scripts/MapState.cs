@@ -12,10 +12,7 @@ public class MapState : BaseState
 
     public override void UpdateState()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            StateManager.Instance.SwitchState(StateManager.Instance.Test);
-        }
+
     }
 
     public override void LeaveState()

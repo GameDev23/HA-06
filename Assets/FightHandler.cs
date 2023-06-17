@@ -8,6 +8,7 @@ public class FightHandler : MonoBehaviour
 
     public GameObject enemy;
     public GameObject enemySpawnPos;
+    public GameObject CanvasFight;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,7 @@ public class FightHandler : MonoBehaviour
 
     public void EnterFight()
     {
+        CanvasFight.SetActive(true);
         GameObject enemyInstance = Instantiate(enemy, enemySpawnPos.transform);
         enemyInstance.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
         Debug.Log(enemyInstance.transform.localScale);

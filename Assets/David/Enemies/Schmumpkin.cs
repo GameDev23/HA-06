@@ -27,12 +27,12 @@ public class Schmumpkin : Enemy
 
     public override void Defend()
     {
-        base.Defend();
+        animator.SetTrigger("triggerDefend");
     }
 
     public override void Charge()
     {
-        base.Charge();
+        animator.SetTrigger("triggerCharge");
     }
 
     public override void EnterAnimation()
@@ -48,10 +48,5 @@ public class Schmumpkin : Enemy
     public override void DieAnimation()
     {
         base.DieAnimation();
-    }
-
-    public override void IdleAnimation()
-    {
-        
     }
 }
