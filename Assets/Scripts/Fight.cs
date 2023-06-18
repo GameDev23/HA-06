@@ -49,7 +49,33 @@ public class Fight : BaseState
         {
             //disable buttons so that player cant attack during enemies turn
             ToggleButtons(false);
-            enemy.Attack();
+            //check if enemy is charging otherwise get next attack
+            if (Manager.Instance.isEnemyCharging)
+            {
+                //Make charge attack
+                enemy.Charge();
+                Manager.Instance.isEnemyCharging = false;
+                
+                
+            }
+            else
+            {
+                //get percentage to decide wether to attack or to charge
+                int attackIndex = Random.Range(0, 100);
+                if (attackIndex <= 66)
+                {
+                    //Make Normal Attack
+                    Debug.Log("Enemy is attacking");
+                    enemy.Attack();
+                }
+                else
+                {
+                    //Enemy charges
+                    Debug.Log("Enemy is charging");
+                    Manager.Instance.isEnemyCharging = true;
+                
+                }
+            }
             Manager.Instance.isPlayerTurn = true;
             isButtonsToggle = false;
         }

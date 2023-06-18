@@ -29,6 +29,12 @@ public class ButtonScript : MonoBehaviour
 
     public void OnDefend()
     {
+        if(Manager.Instance.isPlayerTurn && FightHandler.Instance.enemy.GetComponent<Enemy>().animator.GetBool("isIdle"))
+        {
+            //change turn to player
+            Manager.Instance.isPlayerTurn = false;
+            Manager.Instance.isPlayerDefending = true;
+        }
         
     }
 
@@ -38,6 +44,7 @@ public class ButtonScript : MonoBehaviour
         Manager.Instance.PlayerHp = Manager.Instance.PlayerHp + HealAmount > Manager.Instance.PlayerMaxHealth
             ? Manager.Instance.PlayerMaxHealth
             : Manager.Instance.PlayerHp + HealAmount;
+        Manager.Instance.isPlayerTurn = false;
     }
 
     public void OnRun()

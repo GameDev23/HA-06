@@ -6,6 +6,9 @@ public class AudioManager : MonoBehaviour
 {
     // Instantiating Audio manager
     public static AudioManager Instance;
+
+    public AudioClip Thunder;
+    public AudioSource SourceSFX;
     
     private void Awake()
     {

@@ -10,6 +10,8 @@ public class Manager : MonoBehaviour
     public int PlayerMaxHealth = 10;
     public int PlayerHp;
     public bool isPlayerTurn = true;
+    public bool isEnemyCharging = false;
+    public bool isPlayerDefending = false;
 
     private void Awake()
     {
