@@ -20,6 +20,8 @@ public class FightHandler : MonoBehaviour
     public Button RunButton;
 
     public TextMeshProUGUI HpTextMesh;
+    public TextMeshProUGUI EnemyHP;
+    public Image HpBar;
     
     // Start is called before the first frame update
     void Start()
@@ -45,6 +47,13 @@ public class FightHandler : MonoBehaviour
         
         //Spawn enemy
         enemy = Instantiate(enemy, enemySpawnPos.transform);
+        Enemy enemyScript = enemy.GetComponent<Enemy>();
+        
+        //TODO DELETE ENEMY HEALTH
+        EnemyHP.text = "HP " + enemyScript.Healthpoints;
+        
+        //Set PlayerHp
+        HpTextMesh.text = "HP " + Manager.Instance.PlayerHp;
         //enemy.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 
 

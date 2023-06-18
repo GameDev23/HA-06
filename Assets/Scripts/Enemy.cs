@@ -6,9 +6,10 @@ public abstract class Enemy : MonoBehaviour
 {
     #region Fields
 
-    public GameObject Body;
+    
     public int Healthpoints;
     public bool isAnimation;
+    public Animator animator;
     #endregion
 
 

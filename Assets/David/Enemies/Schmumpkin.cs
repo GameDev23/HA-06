@@ -2,11 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Schmumpkin : Enemy
 {
     
-    private Animator animator;
     
     private void Awake()
     {
@@ -30,6 +30,8 @@ public class Schmumpkin : Enemy
     public override void Attack()
     {
         animator.SetTrigger("triggerAttack");
+        int rand = Random.Range(1, 4);
+        Manager.Instance.PlayerHp = Manager.Instance.PlayerHp - rand < 0 ? 0 : Manager.Instance.PlayerHp - rand;
     }
 
     public override void Defend()

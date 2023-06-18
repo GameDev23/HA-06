@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Fight : BaseState
 {
-    public bool isPlayerTurn = true;
+    
     
     
     private Enemy enemy;
@@ -21,30 +21,47 @@ public class Fight : BaseState
         animator = FightHandler.Instance.enemy.GetComponent<Animator>();
 
         //Set initial turn to players turn
-        isPlayerTurn = true;
+        Manager.Instance.isPlayerTurn = true;
     }
 
     public override void UpdateState()
     {
-        Debug.Log(animator.GetCurrentAnimatorClipInfo(0)[0].clip.name);
-        if (!isPlayerTurn)
+        //Get current Playerhealth
+        FightHandler.Instance.HpBar.fillAmount = (float) Manager.Instance.PlayerHp / (float) Manager.Instance.PlayerMaxHealth;
+        FightHandler.Instance.HpTextMesh.text = "HP " + Manager.Instance.PlayerHp;
+        FightHandler.Instance.EnemyHP.text = "HP " + enemy.Healthpoints;
+
+        if (enemy.Healthpoints <= 0)
         {
-            Debug.Log("Enemy Turn");
+            //TODO exit fight because player has defeated enemy
+            enemy.DieAnimation();
+            StateManager.Instance.SwitchState(StateManager.Instance.LeaveFight);
+        }
+        if (Manager.Instance.PlayerHp <= 0)
+        {
+            //TODO SHOW DEFEATED SCREEN
+            
+            StateManager.Instance.SwitchState(StateManager.Instance.LeaveFight);
+        }
+        
+        //if enemy has turn
+        if (!Manager.Instance.isPlayerTurn && animator.GetBool("isIdle"))
+        {
             //disable buttons so that player cant attack during enemies turn
             ToggleButtons(false);
             enemy.Attack();
-            isPlayerTurn = true;
+            Manager.Instance.isPlayerTurn = true;
             isButtonsToggle = false;
         }
-        else if (isPlayerTurn && animator.GetCurrentAnimatorClipInfo(0)[0].clip.name == "Idle")
+        //if player has turn
+        else if (Manager.Instance.isPlayerTurn && animator.GetBool("isIdle"))
         {
             
             ToggleButtons(true);
-            Debug.Log("its player turn");
             if (Input.GetKeyDown(KeyCode.K))
             {
                 //TODO IMPLEMENT ACTIONS FROM BUTTONS
-                isPlayerTurn = false;
+                Manager.Instance.isPlayerTurn = false;
                 isButtonsToggle = false;
             }
         }

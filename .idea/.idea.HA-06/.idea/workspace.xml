@@ -6,22 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="cb8f679b-56e4-4bfc-b352-2981ef99b379" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HA-06/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HA-06/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/David/Enemies/SchmumpAttack.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/David/Enemies/SchmumpAttack.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/David/Enemies/SchmumpIdle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/David/Enemies/SchmumpIdle.anim.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/David/Enemies/Schmumpkin.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/David/Enemies/Schmumpkin.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/David/Enemies/Schmumpkin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/David/Enemies/Schmumpkin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/David/Enemies/Schmumpkin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/David/Enemies/Schmumpkin.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FightHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FightHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BaseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnterFight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnterFight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeaveFight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeaveFight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +23,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/FightHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/IdleStateScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LeaveFight.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -113,6 +107,7 @@
       <workItem from="1687002450760" duration="4005000" />
       <workItem from="1687006791939" duration="1384000" />
       <workItem from="1687038445785" duration="5304000" />
+      <workItem from="1687086984124" duration="6885000" />
     </task>
     <servers />
   </component>

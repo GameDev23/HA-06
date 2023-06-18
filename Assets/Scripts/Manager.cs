@@ -7,6 +7,9 @@ public class Manager : MonoBehaviour
     // Instantiating Scene manager
     public static Manager Instance;
     public bool isFight = false;
+    public int PlayerMaxHealth = 10;
+    public int PlayerHp;
+    public bool isPlayerTurn = true;
 
     private void Awake()
     {
@@ -20,6 +23,8 @@ public class Manager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        PlayerHp = PlayerMaxHealth;
     }
 
     // Update is called once per frame

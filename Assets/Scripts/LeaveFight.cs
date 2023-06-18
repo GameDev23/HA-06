@@ -22,6 +22,9 @@ public class LeaveFight : BaseState
         //Enable player movement
         Player.SetActive(true);
         
+        //Reset player health
+        Manager.Instance.PlayerHp = Manager.Instance.PlayerMaxHealth;
+        
         //After the transition to fight is done then switch to Fight state
         FightHandler.Instance.CanvasFight.SetActive(false);
         Destroy(FightHandler.Instance.enemy);
