@@ -45,6 +45,7 @@ public class ButtonScript : MonoBehaviour
             ? Manager.Instance.PlayerMaxHealth
             : Manager.Instance.PlayerHp + HealAmount;
         Manager.Instance.isPlayerTurn = false;
+        FightHandler.Instance.ShowDialog("Healed " + HealAmount + " HP");
     }
 
     public void OnRun()

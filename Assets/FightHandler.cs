@@ -21,7 +21,10 @@ public class FightHandler : MonoBehaviour
 
     public TextMeshProUGUI HpTextMesh;
     public TextMeshProUGUI EnemyHP;
+    public TextMeshProUGUI DialogBox;
     public Image HpBar;
+    
+    private Coroutine storedRoutine = null;
     
     // Start is called before the first frame update
     void Start()
@@ -57,5 +60,22 @@ public class FightHandler : MonoBehaviour
         //enemy.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 
 
+    }
+
+    public void ShowDialog(string text)
+    {
+        
+        if(storedRoutine != null)
+            StopCoroutine(storedRoutine);
+        storedRoutine = StartCoroutine(buildDialog(text));
+    }
+    IEnumerator buildDialog(string text)
+    {
+        DialogBox.text = "";
+        foreach (char letter in text)
+        {
+            DialogBox.text += letter;
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 }

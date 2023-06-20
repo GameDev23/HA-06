@@ -54,6 +54,7 @@ public class Fight : BaseState
             {
                 //Make charge attack
                 enemy.Charge();
+                FightHandler.Instance.ShowDialog("TAKE THIS!!! \n-" + enemy.name.Replace("(Clone)", ""));
                 Manager.Instance.isEnemyCharging = false;
                 
                 
@@ -66,12 +67,14 @@ public class Fight : BaseState
                 {
                     //Make Normal Attack
                     Debug.Log("Enemy is attacking");
+                    FightHandler.Instance.ShowDialog("Take this you Wurst \n-" + enemy.name.Replace("(Clone)", ""));
                     enemy.Attack();
                 }
                 else
                 {
                     //Enemy charges
                     Debug.Log("Enemy is charging");
+                    FightHandler.Instance.ShowDialog("Time to prepare my Charged attack... \n-" + enemy.name.Replace("(Clone)", ""));
                     Manager.Instance.isEnemyCharging = true;
                 
                 }
