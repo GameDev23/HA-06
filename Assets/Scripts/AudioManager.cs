@@ -8,7 +8,11 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance;
 
     public AudioClip Thunder;
+    public AudioClip FightBGM;
+    public AudioClip DungeonBGM;
     public AudioSource SourceSFX;
+    public AudioSource SourceRain;
+    public AudioSource SourceBGM;
     
     private void Awake()
     {

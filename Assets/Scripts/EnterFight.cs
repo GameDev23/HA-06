@@ -31,8 +31,10 @@ public class EnterFight : BaseState
         
         //TODO Pass background, music etc to fighthandler
         FightHandler.Instance.EnterFight();
+        AudioManager.Instance.SourceBGM.clip = AudioManager.Instance.FightBGM;
+        AudioManager.Instance.SourceBGM.Play();
 
-
+        FightHandler.Instance.DialogBox.text = "";
         
         //After the transition to fight is done then switch to Fight state
         StateManager.Instance.SwitchState(StateManager.Instance.Fight);

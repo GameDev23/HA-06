@@ -22,7 +22,7 @@ public class ButtonScript : MonoBehaviour
                     ? 0
                     : FightHandler.Instance.enemy.GetComponent<Enemy>().Healthpoints - rand;
             
-            //change turn to player
+            //change turn to enemy
             Manager.Instance.isPlayerTurn = false;
         }
     }
@@ -40,12 +40,17 @@ public class ButtonScript : MonoBehaviour
 
     public void OnHeal()
     {
-        int HealAmount = 5;
-        Manager.Instance.PlayerHp = Manager.Instance.PlayerHp + HealAmount > Manager.Instance.PlayerMaxHealth
-            ? Manager.Instance.PlayerMaxHealth
-            : Manager.Instance.PlayerHp + HealAmount;
-        Manager.Instance.isPlayerTurn = false;
-        FightHandler.Instance.ShowDialog("Healed " + HealAmount + " HP");
+        Debug.Log("Healing");
+        if(Manager.Instance.isPlayerTurn && FightHandler.Instance.enemy.GetComponent<Enemy>().animator.GetBool("isIdle"))
+        {
+            Debug.Log(Manager.Instance.isPlayerTurn);
+            int HealAmount = 5;
+            Manager.Instance.PlayerHp = Manager.Instance.PlayerHp + HealAmount > Manager.Instance.PlayerMaxHealth
+                ? Manager.Instance.PlayerMaxHealth
+                : Manager.Instance.PlayerHp + HealAmount;
+            FightHandler.Instance.ShowDialog("Healed " + HealAmount + " HP");
+            Manager.Instance.isPlayerTurn = false;
+        }
     }
 
     public void OnRun()

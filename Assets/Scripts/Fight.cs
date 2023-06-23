@@ -48,9 +48,20 @@ public class Fight : BaseState
 
             StateManager.Instance.SwitchState(StateManager.Instance.LeaveFight);
         }
-        
+        //if player has turn
+        if (Manager.Instance.isPlayerTurn && animator.GetBool("isIdle"))
+        {
+            
+            ToggleButtons(true);
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                //TODO IMPLEMENT ACTIONS FROM BUTTONS
+                Manager.Instance.isPlayerTurn = false;
+                isButtonsToggle = false;
+            }
+        }
         //if enemy has turn
-        if (!Manager.Instance.isPlayerTurn && animator.GetBool("isIdle"))
+        else if (!Manager.Instance.isPlayerTurn && animator.GetBool("isIdle") && !enemy.isAnimation)
         {
             //disable buttons so that player cant attack during enemies turn
             ToggleButtons(false);
@@ -61,8 +72,8 @@ public class Fight : BaseState
                 enemy.Charge();
                 FightHandler.Instance.ShowDialog("TAKE THIS!!! \n-" + enemy.name.Replace("(Clone)", ""));
                 Manager.Instance.isEnemyCharging = false;
-                
-                
+
+
             }
             else
             {
@@ -81,24 +92,13 @@ public class Fight : BaseState
                     Debug.Log("Enemy is charging");
                     FightHandler.Instance.ShowDialog("Time to prepare my Charged attack... \n-" + enemy.name.Replace("(Clone)", ""));
                     Manager.Instance.isEnemyCharging = true;
-                
+                    Manager.Instance.isPlayerTurn = true;
                 }
             }
-            Manager.Instance.isPlayerTurn = true;
+
             isButtonsToggle = false;
         }
-        //if player has turn
-        else if (Manager.Instance.isPlayerTurn && animator.GetBool("isIdle"))
-        {
-            
-            ToggleButtons(true);
-            if (Input.GetKeyDown(KeyCode.K))
-            {
-                //TODO IMPLEMENT ACTIONS FROM BUTTONS
-                Manager.Instance.isPlayerTurn = false;
-                isButtonsToggle = false;
-            }
-        }
+
 
 
 
