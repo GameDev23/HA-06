@@ -31,6 +31,7 @@ public class Schmumpkin : Enemy
     public override void Attack()
     {
         animator.SetTrigger("triggerAttack");
+        
         StartCoroutine(AttackRoutine());
     }
 
