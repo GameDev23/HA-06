@@ -6,6 +6,7 @@ public class Manager : MonoBehaviour
 {
     // Instantiating Scene manager
     public static Manager Instance;
+    public GameObject Player;
     public bool isFight = false;
     public int PlayerMaxHealth = 10;
     public int PlayerHp;
