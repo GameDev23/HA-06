@@ -59,7 +59,6 @@ public class FightHandler : MonoBehaviour
         HpTextMesh.text = "HP " + Manager.Instance.PlayerHp;
         //enemy.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 
-
     }
 
     public void ShowDialog(string text)

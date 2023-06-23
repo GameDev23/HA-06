@@ -38,6 +38,7 @@ public class EnemyMap : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Enter");
         if(other.CompareTag("Player"))
             isEntered = true;
     }

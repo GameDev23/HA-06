@@ -34,13 +34,15 @@ public class Fight : BaseState
         if (enemy.Healthpoints <= 0)
         {
             //TODO exit fight because player has defeated enemy
+            Debug.Log("enemy defeated leaving");
             enemy.DieAnimation();
             StateManager.Instance.SwitchState(StateManager.Instance.LeaveFight);
         }
         if (Manager.Instance.PlayerHp <= 0)
         {
             //TODO SHOW DEFEATED SCREEN
-            
+            Debug.Log("player defeated");
+
             StateManager.Instance.SwitchState(StateManager.Instance.LeaveFight);
         }
         
