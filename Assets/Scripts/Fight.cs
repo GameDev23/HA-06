@@ -20,6 +20,9 @@ public class Fight : BaseState
 
         animator = FightHandler.Instance.enemy.GetComponent<Animator>();
 
+        if (animator == null)
+            animator = enemy.animator;
+
         //Set initial turn to players turn
         Manager.Instance.isPlayerTurn = true;
     }
