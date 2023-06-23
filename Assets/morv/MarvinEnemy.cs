@@ -7,11 +7,13 @@ public class MarvinEnemy : Enemy
     public override void Attack()
     {
         animator.SetTrigger("triggerAttack");
+        StartCoroutine(AttackRoutine());
     }
 
     public override void Charge()
     {
         animator.SetTrigger("triggerCharge");
+        StartCoroutine(ChargeRoutine());
     }
 
     public override void ChargeAnimation()
@@ -23,6 +25,7 @@ public class MarvinEnemy : Enemy
     public override void Defend()
     {
         animator.SetTrigger("triggerDefend");
+        
     }
 
     public override void DieAnimation()
@@ -51,5 +54,54 @@ public class MarvinEnemy : Enemy
     {
         this.animator = gameObject.GetComponent<Animator>();
         this.Healthpoints = 10;
+    }
+    
+    IEnumerator ChargeRoutine()
+    {
+        
+        while (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        {
+            
+            yield return null;
+        }
+
+        while (animator.GetCurrentAnimatorStateInfo(0).IsName("Charge"))
+        {
+            yield return null;
+        }
+        
+        Manager.Instance.isPlayerTurn = true;
+        //End of charging  now do dmg
+        if (!Manager.Instance.isPlayerDefending)
+            Manager.Instance.PlayerHp -= Manager.Instance.PlayerHp;
+        Manager.Instance.isPlayerDefending = false;
+        Debug.Log("Players turn");
+        isAnimation = false;
+
+    }
+
+    IEnumerator AttackRoutine()
+    {
+        
+        while (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        {
+            
+            yield return null;
+        }
+
+        while (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        {
+            yield return null;
+        }
+        
+        Manager.Instance.isPlayerTurn = true;
+        //End of charging  now do dmg
+        int rand = Random.Range(1, 4);
+        if (!Manager.Instance.isPlayerDefending)
+            Manager.Instance.PlayerHp = Manager.Instance.PlayerHp - rand < 0 ? 0 : Manager.Instance.PlayerHp - rand;
+        Manager.Instance.isPlayerDefending = false;
+        Debug.Log("Players turn");
+        isAnimation = false;
+
     }
 }

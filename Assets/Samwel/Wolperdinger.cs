@@ -57,10 +57,10 @@ public class Wolperdinger : Enemy
 
     IEnumerator ChargeRoutine()
     {
-
+        
         while (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
-
+            
             yield return null;
         }
 
@@ -68,19 +68,23 @@ public class Wolperdinger : Enemy
         {
             yield return null;
         }
-
+        
+        Manager.Instance.isPlayerTurn = true;
         //End of charging  now do dmg
         if (!Manager.Instance.isPlayerDefending)
             Manager.Instance.PlayerHp -= Manager.Instance.PlayerHp;
         Manager.Instance.isPlayerDefending = false;
+        Debug.Log("Players turn");
+        isAnimation = false;
+
     }
 
     IEnumerator AttackRoutine()
     {
-
+        
         while (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
-
+            
             yield return null;
         }
 
@@ -88,13 +92,16 @@ public class Wolperdinger : Enemy
         {
             yield return null;
         }
-
-
+        
+        Manager.Instance.isPlayerTurn = true;
         //End of charging  now do dmg
         int rand = Random.Range(1, 4);
         if (!Manager.Instance.isPlayerDefending)
             Manager.Instance.PlayerHp = Manager.Instance.PlayerHp - rand < 0 ? 0 : Manager.Instance.PlayerHp - rand;
         Manager.Instance.isPlayerDefending = false;
+        Debug.Log("Players turn");
+        isAnimation = false;
+
     }
 
 
