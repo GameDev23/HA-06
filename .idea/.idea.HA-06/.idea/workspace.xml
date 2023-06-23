@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cb8f679b-56e4-4bfc-b352-2981ef99b379" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HA-06/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HA-06/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/David/Enemies/Schmumpkin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/David/Enemies/Schmumpkin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/David/Lightning.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/David/Lightning.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +39,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\Meichler\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Meichler\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\Meichler\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\dstec\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\dstec\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\dstec\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -103,6 +103,7 @@
       <workItem from="1687101218628" duration="5681000" />
       <workItem from="1687275948386" duration="965000" />
       <workItem from="1687527986458" duration="4561000" />
+      <workItem from="1687538243621" duration="930000" />
     </task>
     <servers />
   </component>

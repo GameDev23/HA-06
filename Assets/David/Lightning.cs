@@ -11,7 +11,7 @@ public class Lightning : MonoBehaviour
     public float blitzIntensitaet = 1f; // Maximale Intensität während des Blitzes
     
     public float timer = 0f;
-    public float originalIntensitaet;
+    public List<float> originalIntensitaet;
 
     public float delayBetweenLightning = 5f;
     [FormerlySerializedAs("isDuringLightning")] public int LightningCountDuringLightning = 0;
@@ -19,7 +19,10 @@ public class Lightning : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        originalIntensitaet = Lights[0].intensity;
+        foreach (Light2D light in Lights)
+        {
+            originalIntensitaet.Add(light.intensity);
+        }
     }
 
     // Update is called once per frame
@@ -61,12 +64,15 @@ public class Lightning : MonoBehaviour
 
     private IEnumerator ResetSpotlightIntensitaet()
     {
+        Debug.Log(originalIntensitaet.Count + "  " + Lights.Length);
         yield return new WaitForSeconds(blitzDauer);
 
         // Setze die Intensität aller Spotlights auf die ursprüngliche Intensität zurück
+        int i = 0;
         foreach (Light2D light in Lights)
         {
-            light.intensity = originalIntensitaet;
+            light.intensity = originalIntensitaet[i];
+            i++;
         }
     }
 }
