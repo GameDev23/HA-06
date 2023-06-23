@@ -12,12 +12,14 @@ public class Wolperdinger : Enemy
     }
     public override void Attack()
     {
+        isAnimation = true;
         animator.SetTrigger("triggerAttack");
         StartCoroutine(AttackRoutine());
     }
 
     public override void Charge()
     {
+        isAnimation = true;
         animator.SetTrigger("triggerCharge");
         StartCoroutine(ChargeRoutine());
 

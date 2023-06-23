@@ -11,17 +11,15 @@ public class LeaveFight : BaseState
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
-        elapsedTime = 0f;
     }
     
     public override void EnterState()
     {
         Debug.Log("Entered LeaveFight State");
         
-        Destroy(FightHandler.Instance.enemy);
+        elapsedTime = 0f;
         StartCoroutine(exitFight());
-
-
+        
     }
 
     public override void UpdateState()
@@ -39,9 +37,11 @@ public class LeaveFight : BaseState
         if(Manager.Instance.PlayerHp <= 0)
             FightHandler.Instance.ShowDialog("You have lost the battle....\n Pathetic..");
         else
+        {
             FightHandler.Instance.ShowDialog("You have defeated the enemy!");
-
-        FightHandler.Instance.enemy.SetActive(false);
+            Destroy(FightHandler.Instance.enemy);
+        }
+        
         while(elapsedTime <= 2f)
         {
             Debug.Log("In Enumerator " + elapsedTime);
