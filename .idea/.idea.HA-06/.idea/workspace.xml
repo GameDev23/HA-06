@@ -6,11 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="cb8f679b-56e4-4bfc-b352-2981ef99b379" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HA-06/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HA-06/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/David/Enemies/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/David/Enemies/Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/David/Enemies/Charge.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/David/Enemies/Charge.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/David/Enemies/Schmumpkin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/David/Enemies/Schmumpkin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/C2/Sprites/Dungeon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/C2/Sprites/Dungeon.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/C2/Sprites/Enemies/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/C2/Sprites/Enemies/Attack.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/C2/Sprites/Enemies/Charge.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/C2/Sprites/Enemies/Charge.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/C2/Sprites/Enemies/GetHit.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/C2/Sprites/Enemies/GetHit.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/C2/Sprites/Enemies/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/C2/Sprites/Enemies/Idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samwel/Samwel Grid.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samwel/Samwel Grid.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samwel/Wolperding.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samwel/Wolperding.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeaveFight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeaveFight.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,11 +21,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/dstec/Project/HA-06/Assets/C2/Sprites/Enemies/Attack.anim" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FightHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/IdleStateScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/RainToggleScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dstec/Project/HA-06/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dstec/Project/HA-06/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dstec/Project/HA-06/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dstec/Project/HA-06/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dstec/Project/HA-06/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dstec/Project/HA-06/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dstec/Project/HA-06/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dstec/Project/HA-06/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dstec/Project/HA-06/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LeaveFight.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dstec/Project/HA-06/Assets/morv/attack.anim" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="2RF5hXVodwBVbXvvc0iEO8xxLQT" />
