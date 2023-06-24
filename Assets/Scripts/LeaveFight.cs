@@ -36,10 +36,14 @@ public class LeaveFight : BaseState
     {
         if(Manager.Instance.PlayerHp <= 0)
             FightHandler.Instance.ShowDialog("You have lost the battle....\n Pathetic..");
-        else
+        else if(FightHandler.Instance.enemy.GetComponent<Enemy>().Healthpoints <= 0)
         {
             FightHandler.Instance.ShowDialog("You have defeated the enemy!");
             Destroy(FightHandler.Instance.enemy);
+        }
+        else
+        {
+            FightHandler.Instance.ShowDialog("You cant run forever you coward \n-" + FightHandler.Instance.enemy.name.Replace("(Clone)",""));
         }
         
         while(elapsedTime <= 2f)
@@ -48,6 +52,7 @@ public class LeaveFight : BaseState
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+        Destroy(FightHandler.Instance.enemy);
 
 
         //Enable player movement
